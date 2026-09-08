@@ -302,6 +302,21 @@ body::after {
     width: 100%;
 
     padding: 20px;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    border: 1px solid #252525;
+
+    color: #888;
+
+    transition: all 0.25s ease;
+}
+.archive-menu button:hover {
+    border-color: #666;
+
+    padding-left: 30px;
+
+    background: rgba(255, 255, 255, 0.03);
 }
 .archive-menu .locked {
     color: #333;
@@ -336,3 +351,80 @@ body::after {
 
     color: #ddd;
 }
+.system-warning {
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #777;
+
+    animation: warningFlicker 3s infinite;
+}
+@keyframes warningFlicker {
+
+    0%, 90%, 100% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 0.2;
+    }
+
+    94% {
+        opacity: 1;
+    }
+}
+.locked-text {
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #333;
+
+}
+#archive {
+
+    position: relative;
+
+    overflow: hidden;
+}
+#archive::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+            repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(255,255,255,0.015) 4px
+            );
+
+    z-index: 50;
+}
+.clock {
+
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #444;
+
+}
+
+

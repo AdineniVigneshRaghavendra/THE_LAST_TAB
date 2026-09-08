@@ -59,6 +59,10 @@
                 <p class="archive-status">
                     CONNECTION: ACTIVE
                 </p>
+                <p class="system-warning">⚠️ UNAUTHORIZED SESSION DETECTED</p>
+                <p class="clock">
+                    SYSTEM TIME: <span id="systemClock">00:00:00</span>
+                </p>
             </div>
 
             <div class="archive-menu">
@@ -74,6 +78,14 @@
                 <button onclick="openSection('messages')">
                     [ 04 ] MESSAGES
                 </button>
+                <button class="locked" onclick="lockedMessage()">
+                    [ ?? ] THE LAST TAB
+
+                    <span class="locked-text">
+                        ACCESS RESTRICTED
+                    </span>
+                </button>
+
             </div>
          <div id="records" class="archive-section">
             <button onclick="closeSection()"><-BACK</button>

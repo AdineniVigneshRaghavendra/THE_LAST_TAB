@@ -1,8 +1,17 @@
 const enterButton = document.getElementById("enterButton");
+const ambientSound = document.getElementById("ambientSound");
 
 enterButton.addEventListener("click", function () {
 
-    alert("ARCHIVE ACCESS GRANTED");
+    ambientSound.volume = 0.8;
+
+
+    ambientSound.play();
+
+    document.querySelector(".screen").style.display = "none";
+
+    document.getElementById("archive").style.display = "block";
+
 });
 
 const title = document.getElementById("title");
@@ -23,3 +32,31 @@ setInterval(function() {
                         }, 100);
     }
 },3000);
+
+
+function openSection(sectionName) {
+
+    document.querySelector(".archive-menu").style.display = "none";
+
+    document.querySelectorAll(".archive-section").forEach(function(section) {
+
+        section.style.display = "none";
+    });
+
+     document.getElementById(sectionName).style.display = "block";
+
+}
+
+function closeSection() {
+
+    document.querySelectorAll(".archive-section").forEach(function(section){
+
+        section.style.display = "none";
+    });
+
+    document.querySelector(".archive-menu").style.display = "flex";
+}
+function lockedMessage() {
+
+    alert("ACCESS DENIED.");
+}

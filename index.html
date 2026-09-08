@@ -12,12 +12,15 @@
 
     </head>
     <body>
+        <audio id="ambientSound">
+            <source src="audio/pwlpl-old-computer-booting-sound-effect-521121.mp3" type="audio/mpeg">
+        </audio>
         <div class="screen">
             <div class="terminal">
 
                 <p class="system">SYSTEM CONNECTION</p>
 
-                <h1>THE LAST TAB</h1>
+                <h1 id="title">THE LAST TAB</h1>
 
                 <p>------------------------------------------</p>
 
@@ -35,7 +38,7 @@
                 <p class="warning">17 DAYS AGO</p>
                 <br>
                 <p>STATUS:</p>
-                <p class=""warning>STILL HERE</p>
+                <p class="warning">STILL HERE</p>
                 <br><br>
 
                 <button id="enterButton">
@@ -46,7 +49,98 @@
                 </p>
             </div>
         </div>
+        <div id="archive">
+            <div class="archive-header">
 
+                <p>ARCHIVE SYSTEM //07</p>
+
+                <h2>THE LAST TAB</h2>
+
+                <p class="archive-status">
+                    CONNECTION: ACTIVE
+                </p>
+            </div>
+
+            <div class="archive-menu">
+                <button onclick="openSection('records')">
+                    [ 01 ] RECORDS
+                </button>
+                <button onclick="openSection('camera')">
+                    [ 02 ] CAMERA
+                </button>
+                <button onclick="openSection('audio')">
+                    [ 03 ] AUDIO
+                </button>
+                <button onclick="openSection('messages')">
+                    [ 04 ] MESSAGES
+                </button>
+            </div>
+         <div id="records" class="archive-section">
+            <button onclick="closeSection()"><-BACK</button>
+
+            <h2>PERSONNEL RECORD</h2>
+            <p>SUBJECT: 001</p>
+            <p>NAME: UNKNOWN</p>
+            <p>STATUS: MISSING</p>
+            <p>LAST ACTIVE: 17 DAYS AGO</p>
+
+            <br>
+
+            <p>
+                The subject accessed this archive
+                repeatedly between 02:00 and 04:00.
+            </p>
+            <br>
+            <p>FINAL MESSAGE:</p>
+
+            <blockquote>
+                "Someone is using my computer."
+            </blockquote>
+         </div>
+
+         <div id="camera" class="archive-section">
+            <button onclick="closeSection()"><- BACK</button>
+
+            <h2>CAMERA 03</h2>
+
+            <div class="camera-feed">
+                <span>CAMERA 03</span>
+                <span>03:17:42</span>
+                <div class="shadow"></div>
+            </div>
+            <p>STATUS: UNSTABLE</p>
+         </div>
+         <div id="audio" class="archive-section">
+            <button onclick="closeSection()"><- BACK</button>
+
+            <h2>AUDIO RECORDINGS</h2>
+
+            <p>RECORDING 001</p>
+
+            <p>DATE: 17 DAYS AGO</p>
+
+            <br>
+
+            <audio controls>
+                <source src="audio/pwlpl-old-computer-booting-sound-effect-521121.mp3"></audio>
+         </div>
+         <div id="messages" class="archive-section">
+            <button onclick="closeSection()"><- BACK</button>
+            <h2>MESSAGES</h2>
+            <div class="message">
+                UNKNOWN: Are you still there?
+            </div>
+            <div class="message">
+                USER: Who is this?
+            </div>
+            <div class="message">
+                UNKNOWN: You shouldn't have opened this.
+            </div>
+            <div class="message">
+                UNKNOWN: Stop looking.
+            </div>
+         </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
